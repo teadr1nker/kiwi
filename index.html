@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>Kiwi</title>
+</head>
+<body>
+<img id="img" src="kiwi.png" />
+  <button onClick="rotateImg()">Rotate Image</button>
+  <script>
+    let rotation = 0;
+    function rotateImg() {
+      rotation += 15; // add 90 degrees, you can change this as you want
+      if (rotation === 360) {
+        // 360 means rotate back to 0
+        rotation = 0;
+      }
+      document.querySelector("#img").style.transform = `rotate(${rotation}deg)`;
+    }
+  </script>
